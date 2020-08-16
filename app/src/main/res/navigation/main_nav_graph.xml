@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/conversationsFragment">
+    <fragment
+        android:id="@+id/conversationsFragment"
+        tools:layout="@layout/fragment_conversations"
+        android:name="mf.patomessenger.presentation.main.conversations.ConversationsFragment"
+        android:label="ConversationsFragment" >
+        <action
+            android:id="@+id/action_conversationsFragment_to_contactsFragment"
+            app:destination="@id/contactsFragment" />
+        <action
+            android:id="@+id/action_conversationsFragment_to_messagesFragment"
+            app:destination="@id/messagesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactsFragment"
+        tools:layout="@layout/fragment_contacts"
+        android:name="mf.patomessenger.presentation.main.contacts.ContactsFragment"
+        android:label="ContactsFragment" >
+        <action
+            android:id="@+id/action_contactsFragment_to_conversationsFragment"
+            app:destination="@id/conversationsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/messagesFragment"
+        tools:layout="@layout/fragment_conversations"
+        android:name="mf.patomessenger.presentation.main.messages.MessagesFragment"
+        android:label="MessagesFragment" >
+        <argument
+            android:name="conversationId"
+            app:argType="string" />
+        <argument
+            android:name="users"
+            app:argType="string[]" />
+    </fragment>
+</navigation>

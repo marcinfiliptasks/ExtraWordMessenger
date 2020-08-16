@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:id="@+id/fragment_login"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context=".presentation.auth.AuthActivity">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fragment_login_mail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="96dp"
+            android:layout_marginEnd="24dp"
+            android:hint="@string/prompt_email"
+            app:layout_constraintBottom_toTopOf="@id/fragment_login_pass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:selectAllOnFocus="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fragment_login_pass"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:hint="@string/prompt_password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_login_mail">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:selectAllOnFocus="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="64dp"
+            android:enabled="false"
+            android:text="@string/sign_in"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loading"
+            app:layout_constraintVertical_bias="0.2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/fragment_login_register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:enabled="false"
+            android:gravity="center_horizontal"
+            android:text="@string/register"
+            android:textAlignment="center"
+            android:textColor="@color/material_on_surface_emphasis_medium"
+            android:textSize="@dimen/text_size_mid"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_login_pass" />
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="64dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/login"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_login_pass"
+            app:layout_constraintStart_toStartOf="@+id/fragment_login_pass"
+            app:layout_constraintTop_toBottomOf="@id/fragment_login_register"
+            app:layout_constraintVertical_bias="0.3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

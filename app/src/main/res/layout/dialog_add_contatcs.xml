@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:contentInsetStartWithNavigation="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/dialog_add_contacts_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:contentDescription="@string/return_text"
+                android:paddingVertical="@dimen/padding_2xhigh"
+                android:paddingEnd="@dimen/padding_2xhigh"
+                android:paddingRight="@dimen/padding_2xhigh"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                tools:ignore="RtlSymmetry" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/add_contact"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_high"
+                android:textStyle="bold" />
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/contacts_dialog_text_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_vertical_margin"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@id/dialog_confirm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/contacts_dialog_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/please_wait"
+            android:textAlignment="center"
+            android:textSize="@dimen/text_size_high"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/contacts_dialog_text_input"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/contacts_dialog_text_input" />
+
+        <ProgressBar
+            android:id="@+id/contacts_dialog_progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:layout_marginTop="-7dp"
+            android:indeterminate="true"
+            android:max="100"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contacts_dialog_message" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dialog_confirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_vertical_margin"
+            android:enabled="false"
+            android:text="@string/confirm"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

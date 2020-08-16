@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">PatoMessenger</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="invalid_mail">Not a valid email</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="sign_in">Sign In</string>
+    <string name="register">Register</string>
+    <string name="cancel">Cancel</string>
+    <string name="accept">Accept</string>
+    <string name="decline">Decline</string>
+    <string name="singn_up">Sign Up</string>
+    <string name="sign_up_q">Do you want to sign up?</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="chats">Chats</string>
+    <string name="contacts">Contacts</string>
+    <string name="sign_out">Sign out</string>
+    <string name="profile_image">Profile image</string>
+    <string name="start_first_conversation">There\'s nothing here, yet.\nStart your first conversation!</string>
+    <string name="add_first_contact">There\'s nothing here, yet.\nAdd your first contact!</string>
+    <string name="logout_q">Do you want to logout?</string>
+    <string name="add_contact">Add new contact</string>
+    <string name="confirm">Confirm</string>
+    <string name="please_wait">Please wait</string>
+    <string name="lastMessage">%1$s: %2$s</string>
+    <string name="no_messages">No messages in this conversation.</string>
+    <string name="enter_message">Enter the message</string>
+    <string name="channel_desc">Nudy messenger notification channel</string>
+    <string name="return_text">Return</string>
+    <string name="you">You</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="splash">Splash screen</string>
+</resources>

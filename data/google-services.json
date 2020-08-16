@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "107687799921",
+    "firebase_url": "https://nudymessenger-b82d1.firebaseio.com",
+    "project_id": "nudymessenger-b82d1",
+    "storage_bucket": "nudymessenger-b82d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107687799921:android:ec2a03d0673fcb12337fd0",
+        "android_client_info": {
+          "package_name": "mf.patomessenger.data"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107687799921-v3eqtdjda8jvo90rgf0phlvfjcd547rt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBA6dhH-8RU2qQz1hC1fn7W4JineNUjr0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107687799921-v3eqtdjda8jvo90rgf0phlvfjcd547rt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
