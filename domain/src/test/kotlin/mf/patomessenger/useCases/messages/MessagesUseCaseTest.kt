@@ -38,6 +38,6 @@ class MessagesUseCaseTest {
                     }
                 }
         }
-        assert(success)
+        assert(!success)
     }
 }
