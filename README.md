@@ -1,6 +1,6 @@
 # ExtraWordMessenger
 
-ExtraWordMessenger project is a simple messenger app created in around 12h, which sometimes adds an "extra" word to the message.
+ExtraWordMessenger project is a simple messenger app, which sometimes adds an "extra" word to the message.
 
 ## About this project
 - Onion with MVVM
