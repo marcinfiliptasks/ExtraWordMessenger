@@ -10,7 +10,7 @@ import kotlin.reflect.KFunction0
 
 class AlertDialog : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog =
-        MaterialAlertDialogBuilder(requireContext())
+        MaterialAlertDialogBuilder(context)
             .setTitle(title)
             .setMessage(message)
             .setNegativeButton(getString(R.string.decline)) { _, _ ->
